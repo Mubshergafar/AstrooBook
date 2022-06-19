@@ -21,6 +21,7 @@
     "axios": "^0.26.1",
     "mocha": "^9.2.2",
     "morgan": "^1.10.0",
+    "nodemon": "^2.0.16",
     "randomstring": "^1.2.2"
   }
 }

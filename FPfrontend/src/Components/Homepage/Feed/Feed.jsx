@@ -13,16 +13,16 @@ function Feed() {
   useEffect(() => {
     const fetchPosts = async () => {
       const { data } = await axios.get(
-        `http://localhost:3001/api/posts/timeline/${user._id}`
+        `http://localhost:5000/api/posts/timeline/${user._id}`
       );
       setPosts(data);
     };
     fetchPosts();
   }, []);
   return (
-    <div className="feed">
+    <div className='feed'>
       <StoryReel />
-      <MessageSender />
+      <MessageSender setPosts={setPosts} />
       {posts.map((post) => (
         <Post
           key={post.id}
